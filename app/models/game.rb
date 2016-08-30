@@ -10,6 +10,10 @@ class Game < ActiveRecord::Base
   validate :score_difference
   validate :winning_score
 
+  def win?
+    self.player_score > self.opponent_score
+  end
+
   private
 
   def score_difference
