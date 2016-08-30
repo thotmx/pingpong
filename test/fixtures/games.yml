@@ -1,0 +1,16 @@
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player: 
+  opponent: 
+  date_played: 2016-08-30
+  player_score: 1
+  opponent_score: 1
+
+two:
+  player: 
+  opponent: 
+  date_played: 2016-08-30
+  player_score: 1
+  opponent_score: 1

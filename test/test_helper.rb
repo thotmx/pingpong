@@ -21,3 +21,6 @@ class ActionController::TestCase
   include Devise::TestHelpers
 end
 
+class ActiveSupport::TestCase
+  include FactoryGirl::Syntax::Methods
+end

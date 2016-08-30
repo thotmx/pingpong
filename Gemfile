@@ -21,4 +21,8 @@ gem "minitest-rails", "~> 2.0"
 
 group :test do
   gem "minitest-rails-capybara"
+  gem 'shoulda', '~> 3.5'
+  gem 'shoulda-matchers', '~> 2.0'
 end
+
+gem "factory_girl_rails", "~> 4.0"
