@@ -13,6 +13,12 @@ class CanLogGameTest < Capybara::Rails::TestCase
 
     click_link "Log Game"
 
-    page.must_have_content "This is a sample page"
+    fill_in "game_date_played", with: "2016/01/01"
+    select "test2@mail.com", from: "Opponent"  
+    fill_in "Your score", with: "21"
+    fill_in "Their score", with: "19"
+    click_button "Save"
+
+    page.must_have_content "The game was saved!"
   end
 end
