@@ -1,0 +1,11 @@
+<%= form_for :game, url: {action: "create"} do |f| %>
+  <%= f.label :date_played, "Date Played" %>
+  <%= f.date_field :date_played %> 
+  <%= f.label :opponent_id, "Opponent" %>
+  <%= f.collection_select(:opponent_id, User.all, :id, :email) %> 
+  <%= f.label :player_score, "Your score" %>
+  <%= f.text_field :player_score %> 
+  <%= f.label :opponent_score, "Their score" %>
+  <%= f.text_field :opponent_score %> 
+  <%= f.submit "Save" %>
+<% end %>
