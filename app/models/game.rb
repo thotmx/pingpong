@@ -14,6 +14,14 @@ class Game < ActiveRecord::Base
     self.player_score > self.opponent_score
   end
 
+  def won_by?(user_id)
+    if self.player_id == user_id
+      win? 
+    elsif self.opponent_id == user_id
+      !win?
+    end
+  end
+
   private
 
   def score_difference
